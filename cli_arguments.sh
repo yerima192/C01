@@ -1,10 +1,7 @@
 #!/bin/bash
-
+read -a args
 i=1
-
-while [ $# -gt 0 ]
-do 
-echo "argument $i:" $1
+for args in "${args[@]}"; do
+echo "Argument $i : $args" 
 shift
-i=$((i + 1))
-done
+done 
