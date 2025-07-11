@@ -1,33 +1,22 @@
 #!/bin/bash
 
-# Vérification du nombre d'arguments
-if [ $# -ne 3 ]; then
-  echo "Usage: $0 nombre1 nombre2 opérateur"
-  echo "Exemple: $0 5 3 +"
-  exit 1
-fi
-
-# Affectation des arguments à des variables
-a=$1
-b=$2
-op=$3
+# L'utilisateur entre tout sur une seule ligne
+read -p "Entrez l'opération (ex : 5 3 +) : " a b op
 
 # Calcul selon l'opérateur
-case "$op" in
-  +) result=$((a + b));;
-  -) result=$((a - b));;
-  \*) result=$((a * b));;
-  /)
-    if [ "$b" -eq 0 ]; then
-      echo "Erreur : division par zéro"
-      exit 1
-    fi
-    result=$((a / b))
-    ;;
-  *)
-    echo "Opérateur invalide. Utilisez +, -, * ou /"
-    exit 1
-    ;;
-esac
-
-echo "Résultat : $result"
+if [ "$op" = "+" ]; then
+  echo "Résultat : $((a + b))"
+elif [ "$op" = "-" ]; then
+  echo "Résultat : $((a - b))"
+elif [ "$op" = "*" ]; then
+  echo "Résultat : $((a * b))"
+elif [ "$op" = "/" ]; then
+  if [ "$b" -eq 0 ]; then
+    echo "❌ Division par zéro impossible"
+  else
+    echo "Résultat : $((a / b))"
+  fi
+else
+  echo "❌ Opérateur invalide. Utilisez +, -, *, /"
+fi
+ 
