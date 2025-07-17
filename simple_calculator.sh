@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read a b op
+read -p " L'utilisation de deux nombres et un operateur : " a b op
 
 if [ "$op" = "+" ]; then
 echo "Results $((a + b))"
@@ -14,7 +14,7 @@ echo "Results $((a - b))"
  elif [ "$op" = "/" ]; then
 
   
- if [ "$op" = -eq 0]; then         
+ if [ "$b" -eq 0]; then         
 
  echo "Imposible de diviser par zéro"
 
