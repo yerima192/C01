@@ -15,11 +15,11 @@ elif [ "$op" = "*" ]; then
 
 elif [ "$op" = "/" ]; then
   if [ "$b" -eq 0 ]; then
-    echo "❌ Impossible de diviser par zéro"
+    echo "Impossible de diviser par zéro"
   else
     echo "Résultat : $((a / b))"
   fi
 
 else
-  echo "❌ Opération invalide. Utilisez +, -, * ou /"
+  echo "Opération invalide. Utilisez +, -, * ou /"
 fi
