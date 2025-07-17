@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p " L'utilisation de deux nombres et un operateur : " a b op
+read -p "L'utilisation de deux nombres et un operateur : " a b op
 
 if [ "$op" = "+" ]; then
 
@@ -12,7 +12,7 @@ echo "Results : $((a - b))"
 
  elif [ "$op" = "*" ]; then
 
- echo " Results : $((a * b))"
+ echo "Results : $((a * b))"
 
  elif [ "$op" = "/" ]; then
 
@@ -22,12 +22,12 @@ echo "Results : $((a - b))"
 
 else 
 
-echo " Results : $((a / b))"
+echo "Results : $((a / b))"
 
 fi
 
 else
 
-echo "Operation invalide"
+echo "Operation invalide.  Utilisez +, -, * ou /"
 
 fi
