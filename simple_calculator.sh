@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "L'utilisation de deux nombres et un operateur : " a b op
+read a b op
 
 if [ "$op" = "+" ]; then
 
